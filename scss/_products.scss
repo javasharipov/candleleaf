@@ -4,6 +4,21 @@
 	justify-content: center;
 	flex-direction: column;
 	gap: 60px;
+	button {
+		padding: 10px 30px;
+		font-size: 18px;
+		color: #fff;
+		background-color: #56b280;
+		border: 2px solid transparent;
+		border-radius: 8px;
+		cursor: pointer;
+		transition: 0.3s ease-in-out;
+		&:hover {
+			color: #56b280;
+			border: 2px solid #56b280;
+			background-color: #fff;
+		}
+	}
 	.product__content {
 		margin-top: 90px;
 		text-align: center;
