@@ -16,10 +16,23 @@ nav {
 			top: calc(100% - 3px);
 			left: 0;
 			width: 100%;
-			height: 300px;
 			background-color: #eee;
 			border-radius: 10px;
 			box-shadow: 5px 5px 15px #0002;
+			img {
+				width: 70px;
+				height: 70px;
+				border-radius: 50%;
+			}
+			div {
+				display: flex;
+				align-items: center;
+				p {
+					font-size: 14px;
+					text-align: center;
+					color: #000;
+				}
+			}
 		}
 	}
 	.input__form input {
