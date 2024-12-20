@@ -35,7 +35,7 @@ function createCard(data) {
 		const divEl = document.createElement('div')
 		divEl.className = 'card'
 		divEl.innerHTML = `
-            <img src="${product.thumbnail}" alt="Product image">
+            <img data-id=${product.id} src="${product.thumbnail}" alt="Product image">
             <div class="card__content">
                 <span>${product.title}</span>
                 <strong>${product.price} USD</strong>
@@ -62,7 +62,7 @@ wrapperEl.addEventListener('click', e => {
 	if (e.target.tagName === 'IMG') {
 		const productId = e.target.dataset.id
 		if (productId) {
-			window.location.href = `./pages/page.html?id=${productId}`
+			open(`./pages/page.html?id=${productId}`)
 		}
 	}
 })
