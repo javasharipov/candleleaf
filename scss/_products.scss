@@ -5,7 +5,7 @@
 	flex-direction: column;
 	gap: 60px;
 
-	button {
+	.see__more {
 		padding: 10px 30px;
 		font-size: 18px;
 		color: #fff;
@@ -47,7 +47,19 @@
 			height: 210px;
 			display: flex;
 			flex-direction: column;
+			position: relative;
 			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			.favorite {
+				width: 60px;
+				height: 60px;
+				border-radius: 50%;
+				background-color: transparent;
+				border: 1px solid transparent;
+				cursor: pointer;
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
 			img {
 				height: 80%;
 				background-color: #f7f8fa;

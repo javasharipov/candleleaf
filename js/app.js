@@ -39,7 +39,10 @@ function createCard(data) {
             <div class="card__content">
                 <span>${product.title}</span>
                 <strong>${product.price} USD</strong>
-							
+								<button class="favorite"><img
+									src="https://www.svgheart.com/wp-content/uploads/2021/11/heart-silhouette-one-color-love-free-svg-file-SvgHeart.Com.png"
+									alt=""></button>
+			        
             </div>
         `
 		wrapperEl.appendChild(divEl)
@@ -110,5 +113,31 @@ searchDropEl.addEventListener('click', e => {
 		window.location.href = `/pages/page.html?id=${id}`
 		searchInputEl.value = ''
 		searchDropEl.style.display = 'none'
+	}
+})
+
+wrapperEl.addEventListener('click', e => {
+	if (e.target.tagName === 'IMG' && e.target.closest('.favorite')) {
+		const card = e.target.closest('.card')
+		const product = {
+			id: card.querySelector('img').dataset.id,
+			title: card.querySelector('.card__content span').textContent,
+			price: card.querySelector('.card__content strong').textContent,
+			thumbnail: card.querySelector('img').src,
+		}
+
+		let favorites = JSON.parse(localStorage.getItem('wishlist')) || []
+
+		favorites.push(product)
+		localStorage.setItem('wishlist', JSON.stringify(favorites))
+
+		alert(`${product.title} has been added to your wishlist!`)
+	}
+
+	if (e.target.tagName === 'IMG' && !e.target.closest('.favorite')) {
+		const productId = e.target.dataset.id
+		if (productId) {
+			open(`./pages/page.html?id=${productId}`)
+		}
 	}
 })
