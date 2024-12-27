@@ -4,7 +4,7 @@
 	justify-content: center;
 	flex-direction: column;
 	gap: 60px;
-	
+
 	button {
 		padding: 10px 30px;
 		font-size: 18px;
@@ -51,6 +51,10 @@
 			img {
 				height: 80%;
 				background-color: #f7f8fa;
+			}
+			.like__btn {
+				font-size: 16px;
+				padding: 10px 20px;
 			}
 			.card__content {
 				height: 20%;

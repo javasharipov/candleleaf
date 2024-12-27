@@ -39,6 +39,7 @@ function createCard(data) {
             <div class="card__content">
                 <span>${product.title}</span>
                 <strong>${product.price} USD</strong>
+							
             </div>
         `
 		wrapperEl.appendChild(divEl)
